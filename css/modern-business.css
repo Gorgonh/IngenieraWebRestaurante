@@ -1,0 +1,41 @@
+/*!
+ * CSS personalizado, sobreescribe y extiende los estilos del Bootstrap básico
+ * Arturo García Enguita
+ * Ingeniería Web - 4ºGII - EUPT
+ */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  padding-top: 66px;
+}
+
+.plaza-logo {
+  font: 400 45px/1.5 'Berkshire Swash', Helvetica, sans-serif;
+  text-shadow: 4px 4px 0px rgba(0,0,0,0.1);
+}
+
+.carousel-item {
+  height: 65vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.portfolio-item {
+  margin-bottom: 30px;
+}
+
+.strike{
+  text-decoration: line-through;
+}
+
+.display-5 {
+  font-size: 2.0rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
