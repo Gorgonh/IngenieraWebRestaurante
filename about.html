@@ -63,97 +63,107 @@
   <!-- Page Content -->
   <div class="container">
 
-    <!-- Page Heading/Breadcrumbs -->
-    <h1 class="mt-4 mb-3">Sobre nosotros</h1>
+    <!-- Mapa y detalles -->
+    <h1 class="mt-4 mb-3">Local
+	  <small>¿Dónde encontrarnos?</small>
+	</h1>
 
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item">
-        <a href="index.html">Home</a>
-      </li>
-      <li class="breadcrumb-item active">Contact</li>
-    </ol>
-
-    <!-- Content Row -->
     <div class="row">
-      <!-- Map Column -->
+
       <div class="col-lg-8 mb-4">
-        <!-- Embedded Google Map -->
-        <iframe width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?hl=en&amp;ie=UTF8&amp;ll=37.0625,-95.677068&amp;spn=56.506174,79.013672&amp;t=m&amp;z=4&amp;output=embed"></iframe>
+        <iframe 
+		  width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" 
+		  src="http://maps.google.com/maps?hl=es&amp;ie=UTF8&amp;ll=40.351521,-1.109181&amp;spn=56.506174,79.013672&amp;t=m&amp;z=18&amp;output=embed">
+		</iframe>
       </div>
-      <!-- Contact Details Column -->
+
       <div class="col-lg-4 mb-4">
-        <h3>Contact Details</h3>
+        <h3>Detalles de contacto</h3>
         <p>
-          3481 Melrose Place
-          <br>Beverly Hills, CA 90210
+          C. ciudad escolar, 2
+          <br>Teruel, Teruel 44003
           <br>
         </p>
         <p>
-          <abbr title="Phone">P</abbr>: (123) 456-7890
+          <abbr title="Teléfono">Tef</abbr>: 906 616 609
         </p>
         <p>
-          <abbr title="Email">E</abbr>:
-          <a href="mailto:name@example.com">name@example.com
+          <abbr title="Email">&#64</abbr>:
+          <a href="#">pliazza@falso.com
           </a>
         </p>
         <p>
-          <abbr title="Hours">H</abbr>: Monday - Friday: 9:00 AM to 5:00 PM
+          <abbr title="Horario">H</abbr>: Lunes - Domingo: 9:00 a 22:00
         </p>
       </div>
+	  
     </div>
-    <!-- /.row -->
-
-    <!-- Contact Form -->
-    <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
+    <!-- /Mapa y detalles -->
+	
+	<!-- Galeria de imagenes del local -->
+	<h3 class="mt-4 mb-3">Galeria</h3>
+	
     <div class="row">
-      <div class="col-lg-8 mb-4">
-        <h3>Send us a Message</h3>
-        <form name="sentMessage" id="contactForm" novalidate>
-          <div class="control-group form-group">
-            <div class="controls">
-              <label>Full Name:</label>
-              <input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your name.">
-              <p class="help-block"></p>
+
+      <div class="col-lg-4 col-md-12 mb-4">
+        <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-body mb-0 p-0">
+                <img class="img-fluid rounded" src="img/local-1-l.jpg" alt="local">
+              </div>
+			  <div class="modal-footer justify-content-center">
+                <span class="mr-4">Fachada del local</span>
+              </div>
             </div>
           </div>
-          <div class="control-group form-group">
-            <div class="controls">
-              <label>Phone Number:</label>
-              <input type="tel" class="form-control" id="phone" required data-validation-required-message="Please enter your phone number.">
-            </div>
-          </div>
-          <div class="control-group form-group">
-            <div class="controls">
-              <label>Email Address:</label>
-              <input type="email" class="form-control" id="email" required data-validation-required-message="Please enter your email address.">
-            </div>
-          </div>
-          <div class="control-group form-group">
-            <div class="controls">
-              <label>Message:</label>
-              <textarea rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
-            </div>
-          </div>
-          <div id="success"></div>
-          <!-- For success/fail messages -->
-          <button type="submit" class="btn btn-primary" id="sendMessageButton">Send Message</button>
-        </form>
+        </div>
+        <a><img class="img-fluid z-depth-1" src="img/local-1-s.jpg" alt="local"
+            data-toggle="modal" data-target="#modal1"></a>
       </div>
 
-    </div>
-    <!-- /.row -->
-	
-	<!-- Page Heading/Breadcrumbs -->
-    <h1 class="mt-4 mb-3">FAQ
-      <small>Subheading</small>
-    </h1>
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-body mb-0 p-0">
+				<img class="img-fluid rounded" src="img/local-2-l.jpg" alt="interior">
+              </div>
+			  <div class="modal-footer justify-content-center">
+                <span class="mr-4">Interior del local</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a><img class="img-fluid z-depth-1" src="img/local-2-s.jpg" alt="interior"
+            data-toggle="modal" data-target="#modal2"></a>
+      </div>
 
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item">
-        <a href="index.html">Home</a>
-      </li>
-      <li class="breadcrumb-item active">FAQ</li>
-    </ol>
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-body mb-0 p-0">
+				<img class="img-fluid rounded" src="img/local-3-l.jpg" alt="mesa">
+              </div>
+			  <div class="modal-footer justify-content-center">
+                <span class="mr-4">Uno de nuestros muchos platos!</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a><img class="img-fluid z-depth-1" src="img/local-3-s.jpg" alt="mesa"
+            data-toggle="modal" data-target="#modal3"></a>
+      </div>
+	  
+    </div>
+	<!-- /Galeria de imagenes del local -->
+	
+	
+	<!-- Preguntas frequentes -->
+    <h1 class="mt-4 mb-3">FAQ
+      <small>Preguntas frequentes</small>
+    </h1>
 
     <div class="mb-4" id="accordion" role="tablist" aria-multiselectable="true">
       <div class="card">
@@ -185,16 +195,55 @@
       <div class="card">
         <div class="card-header" role="tab" id="headingThree">
           <h5 class="mb-0">
-            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Collapsible Group Item #3</a>
+            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">¿Me lo puedes poner para llevar?</a>
           </h5>
         </div>
         <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
           <div class="card-body">
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            Algunos clientes quieren llevarse a casa una porción mínima que les ha quedado en el plato. Ante esta pregunta lo mejor es que el/la camarer@ no muestre extrañeza y con naturalidad le responda afirmativamente, entendiendo su petición, y entregando al cliente su pequeño paquete para llevar.
           </div>
         </div>
       </div>
     </div>
+	
+	<!-- Formulario de contacto -->
+    <div class="row">
+      <div class="col-lg-8 mb-4">
+        <h3>Buzón de sugerencias</h3>
+        <form name="sentMessage" id="contactForm" novalidate>
+          <div class="control-group form-group">
+            <div class="controls">
+              <label>Nombre completo:</label>
+              <input type="text" class="form-control" id="name">
+              <p class="help-block"></p>
+            </div>
+          </div>
+          <div class="control-group form-group">
+            <div class="controls">
+              <label>Telefono:</label>
+              <input type="tel" class="form-control" id="phone">
+            </div>
+          </div>
+          <div class="control-group form-group">
+            <div class="controls">
+              <label>Email:</label>
+              <input type="email" class="form-control" id="email">
+            </div>
+          </div>
+          <div class="control-group form-group">
+            <div class="controls">
+              <label>Mensaje:</label>
+              <textarea rows="10" cols="100" class="form-control" id="message" maxlength="999" style="resize:none"></textarea>
+            </div>
+          </div>
+          <div id="success"></div>
+          <!-- For success/fail messages -->
+          <button type="submit" class="btn btn-primary" id="sendMessageButton">Enviar correo</button>
+        </form>
+      </div>
+
+    </div>
+    <!-- /.row -->
 
   </div>
   <!-- /.container -->
@@ -243,11 +292,6 @@
   <!-- Bootstrap JavaScript esencial -->
   <script src="js/bootstrap/jquery.min.js"></script>
   <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
-  
-  <!-- Contact form JavaScript -->
-  <!-- Do not edit these files! In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
-  <script src="js/jqBootstrapValidation.js"></script>
-  <script src="js/contact_me.js"></script>
 
 </body>
 
