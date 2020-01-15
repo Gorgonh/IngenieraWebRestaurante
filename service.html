@@ -53,7 +53,7 @@
             <a class="nav-link" href="about.html">Sobre nosotros&nbsp;</a>
           </li>
 		  <li class="nav-item">
-            <a class="btn btn-primary" href="service.html">Iniciar pedido</a>
+            <a class="btn btn-secondary" href="service.html">Iniciar pedido</a>
           </li>
         </ul>
       </div>
@@ -64,55 +64,136 @@
   <div class="container">
 
     <!-- Page Heading/Breadcrumbs -->
-    <h1 class="mt-4 mb-3">Services
-      <small>Subheading</small>
-    </h1>
+    <h1 class="mt-4 mb-3">Datos del pedido</h1>
 
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item">
-        <a href="index.html">Home</a>
-      </li>
-      <li class="breadcrumb-item active">Services</li>
-    </ol>
-
-    <!-- Image Header -->
-    <img class="img-fluid rounded mb-4" src="http://placehold.it/1200x300" alt="">
-
-    <!-- Marketing Icons Section -->
+    <!-- Formulario de dirección sin registro -->
     <div class="row">
-      <div class="col-lg-4 mb-4">
-        <div class="card h-100">
-          <h4 class="card-header">Card Title</h4>
-          <div class="card-body">
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary">Learn More</a>
-          </div>
+      <div class="col-lg-8 mb-4">
+	    <div class="card h-100">
+          <h3 class="card-header">Sin registro <small>Danos una dirección</small></h3>
+          <form name="sentEmail" id="contactForm">
+		    <div class="card-body">
+		      <div class="row">
+		        <div class="col-md-6">
+			      <div class="control-group form-group">
+				    <div class="controls">
+				      <label>Provincia</label>
+				      <input type="text" class="form-control" id="municipality">
+				      <p class="help-block"></p>
+				    </div>
+			      </div>
+		        </div>
+				<div class="col-md-6">
+				  <div class="control-group form-group">
+					<div class="controls">
+					  <label>Localidad</label>
+					  <input type="text" class="form-control" id="locality">
+					</div>
+				  </div>
+				</div>
+		      </div>
+			  <div class="row">
+				<div class="col-md-3">
+				  <div class="control-group form-group">
+					<div class="controls">
+					  <label for="type">Tipo de vía:</label>
+					  <select class="form-control" id="type">
+						<option>Avenida</option>
+						<option>Calle</option>
+						<option>Plaza</option>
+						<option>Otro</option>
+					  </select>
+					</div>
+				  </div>
+				</div>
+				<div class="col-md-6">
+				  <div class="control-group form-group">
+					<div class="controls">
+					  <label>Nombre de la vía</label>
+					  <input type="text" class="form-control" id="via">
+					</div>
+				  </div>
+				</div>
+				<div class="col-md-3">
+				  <div class="control-group form-group">
+					<div class="controls">
+					  <label>Número</label>
+					  <input type="number" class="form-control" id="number" min="0">
+					</div>
+				  </div>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="col-md-3">
+				  <div class="control-group form-group">
+					<div class="controls">
+					  <label>Piso</label>
+					  <input type="number" class="form-control" id="level" min="0">
+					</div>
+				  </div>
+				</div>
+				<div class="col-md-3">  
+				  <div class="control-group form-group">
+					<div class="controls">
+					  <label>Bloque</label>
+					  <input type="text" class="form-control" id="block">
+					</div>
+				  </div>
+				</div>
+				<div class="col-md-3">    
+				  <div class="control-group form-group">
+					<div class="controls">
+					  <label>Puerta</label>
+					  <input type="text" class="form-control" id="door">
+					</div>
+				  </div>
+				</div>
+				<div class="col-md-3">    
+				  <div class="control-group form-group">
+					<div class="controls">
+					  <label>Escalera</label>
+					  <input type="text" class="form-control" id="stair">
+					</div>
+				  </div>
+				</div>
+	          </div>    
+			  <div class="card-footer">
+			    <!-- Consola para mostrar mensajes de error -->
+                <div id="success"></div>
+                <button type="submit" class="btn btn-primary" id="sendMessageButton">Empezar pedido</button>
+			  </div>
+            </div>
+		  </form>
         </div>
-      </div>
+	  </div>	
       <div class="col-lg-4 mb-4">
-        <div class="card h-100">
-          <h4 class="card-header">Card Title</h4>
-          <div class="card-body">
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ipsam eos, nam perspiciatis natus commodi similique totam consectetur praesentium molestiae atque exercitationem ut consequuntur, sed eveniet, magni nostrum sint fuga.</p>
+	  <div class="card h-100">
+        <h3 class="card-header">Usuarios registrados</h3>
+        <form name="login" id="loginForm">
+		<div class="card-body">
+          <div class="control-group form-group">
+            <div class="controls">
+              <label>Tu email:</label>
+              <input type="email" class="form-control" id="email">
+              <p class="help-block"></p>
+            </div>
           </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary">Learn More</a>
+          <div class="control-group form-group">
+            <div class="controls">
+              <label>Contraseña:</label>
+              <input type="password" class="form-control" id="passwd">
+            </div>
           </div>
+		  <div class="card-footer">
+		    <!-- Consola para mostrar mensajes de error -->
+            <div id="success"></div>
+            <button type="submit" class="btn btn-primary" id="sendMessageButton">Empezar pedido</button>
+	      </div>
         </div>
+		</form>
+	  </div>	
       </div>
-      <div class="col-lg-4 mb-4">
-        <div class="card h-100">
-          <h4 class="card-header">Card Title</h4>
-          <div class="card-body">
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary">Learn More</a>
-          </div>
-        </div>
-      </div>
+	</div>  
     </div>
     <!-- /.row -->
 

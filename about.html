@@ -67,7 +67,7 @@
     <h1 class="mt-4 mb-3">Local
 	  <small>¿Dónde encontrarnos?</small>
 	</h1>
-
+	
     <div class="row">
 
       <div class="col-lg-8 mb-4">
@@ -169,48 +169,50 @@
       <div class="card">
         <div class="card-header" role="tab" id="headingOne">
           <h5 class="mb-0">
-            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Collapsible Group Item #1</a>
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">¿Cómo puedo reservar mesa en el restaurante?</a>
           </h5>
         </div>
-
         <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
           <div class="card-body">
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            Será necesario reservar, vía <a href="#form">formulario</a> o telefono. Solo se solicitará el número de tarjeta de crédito, en el caso que la reserva sea mayor de cuatro comensales, como garantía de que la asistencia se realizará correctamente.
           </div>
         </div>
       </div>
       <div class="card">
         <div class="card-header" role="tab" id="headingTwo">
           <h5 class="mb-0">
-            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Collapsible Group Item #2
+            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">¿Puedo cancelar mi reserva?
             </a>
           </h5>
         </div>
         <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
           <div class="card-body">
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-          </div>
+            <strong>SI</strong>, puede cancelar su reserva en cualquier momento desde el enlace del mail que recibió a la hora de solicitar su reserva sin ningún coste para usted. <strong>SOLO</strong> en caso de estar dentro en las 12 horas previas a la hora y fecha de su reserva en Restaurante Pizza Plaza.
+		  </div>
         </div>
       </div>
       <div class="card">
         <div class="card-header" role="tab" id="headingThree">
           <h5 class="mb-0">
-            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">¿Me lo puedes poner para llevar?</a>
+            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">¿Qué pasa si no asisto a mi reserva?</a>
           </h5>
         </div>
         <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
           <div class="card-body">
-            Algunos clientes quieren llevarse a casa una porción mínima que les ha quedado en el plato. Ante esta pregunta lo mejor es que el/la camarer@ no muestre extrañeza y con naturalidad le responda afirmativamente, entendiendo su petición, y entregando al cliente su pequeño paquete para llevar.
+            Desde Pizza Plaza siempre hacemos una doble verificación de cada reserva, enviando un mail a todos nuestros clientes para confirmar su asistencia a la hora de hacer la reserva, y otro entre 24 y 48 horas antes de la fecha y hora de su reserva para la confirmación final.
+			<br><br>
+			En caso de no asistir a la reserva confirmada, se le cargaría en cuenta el precio mínimo por comensal.
           </div>
         </div>
       </div>
     </div>
 	
+	<a class="anchor" id='form'></a>
 	<!-- Formulario de contacto -->
     <div class="row">
       <div class="col-lg-8 mb-4">
-        <h3>Buzón de sugerencias</h3>
-        <form name="sentMessage" id="contactForm" novalidate>
+        <h3>Contáctanos</h3>
+        <form name="sentEmail" id="contactForm">
           <div class="control-group form-group">
             <div class="controls">
               <label>Nombre completo:</label>
@@ -236,8 +238,8 @@
               <textarea rows="10" cols="100" class="form-control" id="message" maxlength="999" style="resize:none"></textarea>
             </div>
           </div>
+		  <!-- Consola para mostrar mensajes de exito/error -->
           <div id="success"></div>
-          <!-- For success/fail messages -->
           <button type="submit" class="btn btn-primary" id="sendMessageButton">Enviar correo</button>
         </form>
       </div>
