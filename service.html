@@ -17,8 +17,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
   
   <!-- Fontawesome CSS, fuentes de Google -->
-  <link href='http://fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
   
   <!-- CSS personalizado, sobreescribe los estilos de bootstrap -->
   <link href="css/modern-business.css" rel="stylesheet">
@@ -63,14 +63,14 @@
   <!-- Page Content -->
   <div class="container">
 
-    <!-- Page Heading/Breadcrumbs -->
+    <!-- Page Heading -->
     <h1 class="mt-4 mb-3">Datos del pedido</h1>
-
-    <!-- Formulario de dirección sin registro -->
+	
     <div class="row">
+	  <!-- Formulario de dirección sin registro -->
       <div class="col-lg-8 mb-4">
-	    <div class="card h-100">
-          <h3 class="card-header">Sin registro <small>Danos una dirección</small></h3>
+	    <div class="card">
+          <h3 class="card-header">Sin registro <small>Tu dirección</small></h3>
           <form name="sentEmail" id="contactForm">
 		    <div class="card-body">
 		      <div class="row">
@@ -157,45 +157,91 @@
 				  </div>
 				</div>
 	          </div>    
-			  <div class="card-footer">
-			    <!-- Consola para mostrar mensajes de error -->
-                <div id="success"></div>
-                <button type="submit" class="btn btn-primary" id="sendMessageButton">Empezar pedido</button>
-			  </div>
-            </div>
+			</div>
+			<div class="card-footer">
+			  <!-- Consola para mostrar mensajes de error -->
+              <div id="success"></div>
+              <button type="submit" class="btn btn-primary" id="sendMessageButton">Empezar pedido</button>
+			</div>
 		  </form>
         </div>
 	  </div>	
+	  <!-- /Formulario de dirección sin registro -->
+	  
+	  <!-- Formulario de registro -->
       <div class="col-lg-4 mb-4">
-	  <div class="card h-100">
-        <h3 class="card-header">Usuarios registrados</h3>
-        <form name="login" id="loginForm">
-		<div class="card-body">
-          <div class="control-group form-group">
-            <div class="controls">
-              <label>Tu email:</label>
-              <input type="email" class="form-control" id="email">
-              <p class="help-block"></p>
-            </div>
-          </div>
-          <div class="control-group form-group">
-            <div class="controls">
-              <label>Contraseña:</label>
-              <input type="password" class="form-control" id="passwd">
-            </div>
-          </div>
-		  <div class="card-footer">
-		    <!-- Consola para mostrar mensajes de error -->
-            <div id="success"></div>
-            <button type="submit" class="btn btn-primary" id="sendMessageButton">Empezar pedido</button>
-	      </div>
-        </div>
-		</form>
-	  </div>	
+	    <div class="card">
+          <h3 class="card-header bg-primary text-white">Registro de usuarios</h3>
+          <form name="register" id="registerForm">
+  		    <div class="card-body">
+              <div class="control-group form-group">
+                <div class="controls">
+                  <label>Tu email:</label>
+                  <input type="email" class="form-control" id="email">
+                  <p class="help-block"></p>
+                </div>
+              </div>
+              <div class="control-group form-group">
+                <div class="controls">
+                  <label>Tu contraseña:</label>
+                  <input type="password" class="form-control" id="passwd">
+                </div>
+              </div>
+              <div class="control-group form-group">
+                <div class="controls">
+                  <label>Confirma tu contraseña:</label>
+                  <input type="password" class="form-control" id="passwd">
+                </div>
+              </div>
+		  	  <div class="form-check form-check-inline">
+			    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+			    <label class="form-check-label" for="inlineCheckbox1">He leído y acepto la <a href="#">Política de Privacidad</a></label>
+              </div>
+		    </div>
+  		    <div class="card-footer bg-primary">
+  		      <!-- espacio para mostrar mensajes de error -->
+              <div id="success"></div>
+              <button type="submit" class="btn btn-light text-primary" id="registerButton">Registrarse</button>
+  	        </div>
+  		  </form>
+	    </div>	
       </div>
+	  <!-- /Formulario de registro -->
 	</div>  
-    </div>
     <!-- /.row -->
+
+    <div class="row">
+	  <div class="col-lg-8 mb-4 float-right"></div>
+	  <!-- Formulario de login -->
+      <div class="col-lg-4 mb-4 float-right">
+	    <div class="card">
+          <h3 class="card-header">Inicia sesión</h3>
+          <form name="login" id="loginForm">
+  		    <div class="card-body">
+              <div class="control-group form-group">
+                <div class="controls">
+                  <label>Tu email:</label>
+                  <input type="email" class="form-control" id="emailLogin">
+                  <p class="help-block"></p>
+                </div>
+              </div>
+              <div class="control-group form-group">
+                <div class="controls">
+                  <label>Tu contraseña:</label>
+                  <input type="password" class="form-control" id="passwdLogin">
+                </div>
+              </div>
+		    </div>
+  		    <div class="card-footer">
+  		      <!-- Espacio para mostrar mensajes de error -->
+              <div id="success"></div>
+              <button type="submit" class="btn btn-primary" id="loginButton">Iniciar sesión</button>
+  	        </div>
+  		  </form>
+	    </div>	
+      </div>	
+	  <!-- /Formulario de login -->
+	</div>
 
   </div>
   <!-- /.container -->
