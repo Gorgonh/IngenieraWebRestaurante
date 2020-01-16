@@ -13,6 +13,9 @@
   <!-- Bootstrap CSS, estructuración básica de la página -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   
+  <!-- Icono de la página -->
+  <link rel='icon' href='img/favicon.ico' type='image/x-icon'/>
+  
   <!-- Fontawesome CSS, iconos -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
   
@@ -60,89 +63,93 @@
     </div>
   </nav>
 
-  <!-- Page Content -->
+  <!-- Contenido -->
   <div class="container">
 
-    <!-- Page Heading/Breadcrumbs -->
-    <h1 class="mt-4 mb-3">Promociones
-      <small>De lunes a jueves 2x1 en complementos</small>
-    </h1>
+    <!-- Ofertas a generar dinámicamente -->
+    <h1 class="mt-5 mb-3">Promociones</h1>
 
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item">
-        <a href="index.html">Home</a>
-      </li>
-      <li class="breadcrumb-item active">About</li>
-    </ol>
-
-    <!-- Intro Content -->
-    <div class="row">
-      <div class="col-lg-6">
-        <img class="img-fluid rounded mb-4" src="http://placehold.it/750x450" alt="">
-      </div>
-      <div class="col-lg-6">
-        <h2>About Modern Business</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptate nihil eum consectetur similique? Consectetur, quod, incidunt, harum nisi dolores delectus reprehenderit voluptatem perferendis dicta dolorem non blanditiis ex fugiat.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, magni, aperiam vitae illum voluptatum aut sequi impedit non velit ab ea pariatur sint quidem corporis eveniet. Odit, temporibus reprehenderit dolorum!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, consequuntur, modi mollitia corporis ipsa voluptate corrupti eum ratione ex ea praesentium quibusdam? Aut, in eum facere corrupti necessitatibus perspiciatis quis?</p>
+    <div class="card text-white bg-primary my-3 text-center">
+      <div class="card-body">
+        <h5 id="promosText" class="text-white m-0">De lunes a jueves 3x2 en complementos</h5>
       </div>
     </div>
-    <!-- /.row -->
-
-    <!-- Team Members -->
-    <h2>Our Team</h2>
-
-    <div class="row">
-      <div class="col-lg-4 mb-4">
-        <div class="card h-100 text-center">
-          <img class="card-img-top" src="http://placehold.it/750x450" alt="">
-          <div class="card-body">
-            <h4 class="card-title">Team Member</h4>
-            <h6 class="card-subtitle mb-2 text-muted">Position</h6>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus aut mollitia eum ipsum fugiat odio officiis odit.</p>
+ 
+    <!-- Intro Content -->
+	<div class="row mb-2">
+	
+	  <!-- 1º Oferta de ejemplo -->
+      <div class="col-md-6">
+        <div class="card flex-md-row mb-4 box-shadow h-md-250">
+          <div class="card-body d-flex flex-column align-items-start">
+            <h3 class="mb-0">
+              <a class="text-dark" href="service.html">3 Medianas 7€ c/u</a>
+            </h3>
+            <div class="mb-1 text-muted">Ahorras 3€</div>
+            <p class="card-text mb-auto">3 pizzas medianas a domicilio 7€ cada una. Masas Roll, con topplers +1€. Válido hasta el 26/01/2020.</p>
+			<a href="service.html" class="btn btn-primary">Encargar</a>
           </div>
-          <div class="card-footer">
-            <a href="#">name@example.com</a>
-          </div>
+          <img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]" style="width: 200px; height: 250px;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22250%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20250%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16fadd52741%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A13pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16fadd52741%22%3E%3Crect%20width%3D%22200%22%20height%3D%22250%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2256.1953125%22%20y%3D%22131%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">
         </div>
       </div>
-      <div class="col-lg-4 mb-4">
-        <div class="card h-100 text-center">
-          <img class="card-img-top" src="http://placehold.it/750x450" alt="">
-          <div class="card-body">
-            <h4 class="card-title">Team Member</h4>
-            <h6 class="card-subtitle mb-2 text-muted">Position</h6>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus aut mollitia eum ipsum fugiat odio officiis odit.</p>
+	  
+	  <!-- 2º Oferta de ejemplo -->
+      <div class="col-md-6">
+        <div class="card flex-md-row mb-4 box-shadow h-md-250">
+          <div class="card-body d-flex flex-column align-items-start">
+            <h3 class="mb-0">
+              <a class="text-dark" href="service.html">2 x 1</a>
+            </h3>
+            <div class="mb-1 text-muted">Ahorras 1 pizza</div>
+            <p class="card-text mb-auto">Oferta válida al pedir cualquier pizza, llévate otra de igual o inferior valor que la primera. Válida hasta el 02/03/2020.</p>
+			<a href="service.html" class="btn btn-primary">Encargar</a>
           </div>
-          <div class="card-footer">
-            <a href="#">name@example.com</a>
-          </div>
+          <img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]" style="width: 200px; height: 250px;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22250%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20250%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16fadd52741%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A13pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16fadd52741%22%3E%3Crect%20width%3D%22200%22%20height%3D%22250%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2256.1953125%22%20y%3D%22131%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">
         </div>
       </div>
-      <div class="col-lg-4 mb-4">
-        <div class="card h-100 text-center">
-          <img class="card-img-top" src="http://placehold.it/750x450" alt="">
-          <div class="card-body">
-            <h4 class="card-title">Team Member</h4>
-            <h6 class="card-subtitle mb-2 text-muted">Position</h6>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus aut mollitia eum ipsum fugiat odio officiis odit.</p>
+	  
+	  <!-- 3º Oferta de ejemplo -->
+      <div class="col-md-6">
+        <div class="card flex-md-row mb-4 box-shadow h-md-250">
+          <div class="card-body d-flex flex-column align-items-start">
+            <h3 class="mb-0">
+              <a class="text-dark" href="service.html">2 Muffins 2.99€</a>
+            </h3>
+            <div class="mb-1 text-muted">Ahorras 2.11€</div>
+            <p class="card-text mb-auto">Acompaña tu pedido con 2 Muffins por sólo 2,99 euros. Oferta válida hasta el 02/03/2020.</p>
+			<a href="service.html" class="btn btn-primary">Encargar</a>
           </div>
-          <div class="card-footer">
-            <a href="#">name@example.com</a>
-          </div>
+          <img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]" style="width: 200px; height: 250px;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22250%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20250%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16fadd52741%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A13pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16fadd52741%22%3E%3Crect%20width%3D%22200%22%20height%3D%22250%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2256.1953125%22%20y%3D%22131%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">
         </div>
       </div>
+	  
+	  <!-- 4º Oferta de ejemplo -->
+      <div class="col-md-6">
+        <div class="card flex-md-row mb-4 box-shadow h-md-250">
+          <div class="card-body d-flex flex-column align-items-start">
+            <h3 class="mb-0">
+              <a class="text-dark" href="service.html">Familiar aquí 13€</a>
+            </h3>
+            <div class="mb-1 text-muted">Ahorras 5€</div>
+            <p class="card-text mb-auto">Pizza familiar solo en tienda 13€. Válida hasta el 02/03/2020.</p>
+			<a href="service.html" class="btn btn-primary">Encargar</a>
+          </div>
+          <img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]" style="width: 200px; height: 250px;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22250%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20250%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16fadd52741%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A13pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16fadd52741%22%3E%3Crect%20width%3D%22200%22%20height%3D%22250%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2256.1953125%22%20y%3D%22131%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">
+        </div>
+      </div>
+	  
     </div>
     <!-- /.row -->
 
   </div>
-  <!-- /.container -->
+  <!-- /Contenido -->
 
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
       <div class="row">
         <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+		  <!-- Listado de referencias -->
           <ul class="list-inline mb-2">
             <li class="list-inline-item">
               <a href="https://github.com/Gorgonh/IngenieraWebRestaurante">GitHub</a>
@@ -157,7 +164,8 @@
           <p class="text-muted small mb-4 mb-lg-0">Ingenería Web, 4º GII 2019. Arturo García Enguita.</p>
         </div>
         <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
-          <ul class="list-inline mb-0">
+          <!-- Listado de RRSS -->
+		  <ul class="list-inline mb-0">
             <li class="list-inline-item mr-3">
               <a href="#">
                 <i class="fab fa-facebook fa-2x fa-fw"></i>
