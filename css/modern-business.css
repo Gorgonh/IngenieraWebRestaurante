@@ -7,15 +7,25 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Offset para la cabecera */
 body {
-  padding-top: 66px;
+  padding-top: 60px;
 }
 
+.anchor {
+  display: block;
+  position: relative;
+  top: -110px; 
+  visibility: hidden;
+}
+
+/* Logo */
 .plaza-logo {
   font: 400 45px/1.5 'Berkshire Swash', Helvetica, sans-serif;
   text-shadow: 4px 4px 0px rgba(0,0,0,0.1);
 }
 
+/* Carrusel */
 .carousel-item {
   height: 65vh;
   min-height: 300px;
@@ -38,4 +48,101 @@ body {
   font-size: 2.0rem;
   font-weight: 300;
   line-height: 1.2;
+}
+
+/* Efectos de hover */
+.basic-hover {
+  opacity: 0.9;
+}
+
+.basic-hover:hover {
+  opacity: 1;
+  transform: scale(.97);
+  transition: all .25s;
+}
+
+.hover {
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 60%;
+}
+
+.hover-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 90;
+  transition: all 0.4s;
+}
+
+.hover img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.3s;
+}
+
+.hover-content {
+  position: relative;
+  z-index: 99;
+}
+
+.hover-effect::after {
+  content: '';
+  width: calc(100% - 3rem);
+  height: calc(100% - 3rem);
+  border: 1px solid #fff;
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  z-index: 90;
+  transition: all 0.3s;
+  transform: scale(1.1);
+  opacity: 0;
+  display: block;
+  opacity: 0;
+}
+
+.hover-effect-content {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  text-align: center;
+  z-index: 99;
+}
+
+.hover-effect-description {
+  opacity: 0;
+  transform: scale(1.3);
+  transition: all 0.3s;
+}
+
+.hover-effect img {
+  width: 110%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hover-effect:hover img {
+  width: 100%;
+}
+
+.hover-effect:hover::after {
+  opacity: 1;
+  transform: none;
+}
+
+.hover-effect:hover .hover-effect-description {
+  opacity: 1;
+  transform: none;
+}
+
+.hover-effect:hover .hover-overlay {
+  background: rgba(0, 0, 0, 0.8);
 }
