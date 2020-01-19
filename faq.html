@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Promociones | Pizza plaza</title>
+  <title>About | Pizza plaza</title>
 
   <!-- Bootstrap CSS, estructuración básica de la página -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -66,93 +66,63 @@
     </div>
   </nav>
 
-  <!-- Contenido -->
+  <!-- Page Content -->
   <div class="container">
-
-    <!-- Ofertas a generar dinámicamente -->
-    <h1 class="mt-5 mb-3">Promociones</h1>
-
-    <div class="card text-white bg-primary my-3 text-center">
-      <div class="card-body">
-        <h5 id="promosText" class="text-white m-0">De lunes a jueves 3x2 en complementos</h5>
-      </div>
-    </div>
- 
-    <!-- Intro Content -->
-	<div class="row mb-2">
 	
-	  <!-- 1º Oferta de ejemplo -->
-      <div class="col-md-6">
-        <div class="card flex-md-row mb-4 box-shadow h-md-250">
-          <div class="card-body d-flex flex-column align-items-start">
-            <h3 class="mb-0">
-              <a class="text-dark" href="service.html">3 Medianas 7€ c/u</a>
-            </h3>
-            <div class="mb-1 text-muted">Ahorras 3€</div>
-            <p class="card-text mb-auto">3 pizzas medianas a domicilio 7€ cada una. Masas Roll, con topplers +1€. Válido hasta el 26/01/2020.</p>
-			<a href="service.html" class="btn btn-primary">Encargar</a>
-          </div>
-          <img class="card-img-right flex-auto d-none d-md-block" alt="promo 777" style="width: 200px; height: 250px;" src="img/oferta1.png" data-holder-rendered="true">
-        </div>
-      </div>
-	  
-	  <!-- 2º Oferta de ejemplo -->
-      <div class="col-md-6">
-        <div class="card flex-md-row mb-4 box-shadow h-md-250">
-          <div class="card-body d-flex flex-column align-items-start">
-            <h3 class="mb-0">
-              <a class="text-dark" href="service.html">2 x 1</a>
-            </h3>
-            <div class="mb-1 text-muted">Ahorras 1 pizza</div>
-            <p class="card-text mb-auto">Oferta válida al pedir cualquier pizza, llévate otra de igual o inferior valor que la primera. Válida hasta el 02/03/2020.</p>
-			<a href="service.html" class="btn btn-primary">Encargar</a>
-          </div>
-          <img class="card-img-right flex-auto d-none d-md-block" alt="promo 2x1 pizza" style="width: 200px; height: 250px;" src="img/oferta2.png" data-holder-rendered="true">
-        </div>
-      </div>
-	  
-	  <!-- 3º Oferta de ejemplo -->
-      <div class="col-md-6">
-        <div class="card flex-md-row mb-4 box-shadow h-md-250">
-          <div class="card-body d-flex flex-column align-items-start">
-            <h3 class="mb-0">
-              <a class="text-dark" href="service.html">2 Muffins 2.99€</a>
-            </h3>
-            <div class="mb-1 text-muted">Ahorras 2.11€</div>
-            <p class="card-text mb-auto">Acompaña tu pedido con 2 Muffins por sólo 2,99 euros. Oferta válida hasta el 02/03/2020.</p>
-			<a href="service.html" class="btn btn-primary">Encargar</a>
-          </div>
-          <img class="card-img-right flex-auto d-none d-md-block" alt="promo 2x1 muffin" style="width: 200px; height: 250px;" src="img/oferta3.png" data-holder-rendered="true">
-        </div>
-      </div>
-	  
-	  <!-- 4º Oferta de ejemplo -->
-      <div class="col-md-6">
-        <div class="card flex-md-row mb-4 box-shadow h-md-250">
-          <div class="card-body d-flex flex-column align-items-start">
-            <h3 class="mb-0">
-              <a class="text-dark" href="service.html">Familiar aquí 13€</a>
-            </h3>
-            <div class="mb-1 text-muted">Ahorras 5€</div>
-            <p class="card-text mb-auto">Pizza familiar solo en tienda 13€. Válida hasta el 02/03/2020.</p>
-			<a href="service.html" class="btn btn-primary">Encargar</a>
-          </div>
-          <img class="card-img-right flex-auto d-none d-md-block" alt="promo 777" style="width: 200px; height: 250px;" src="img/oferta4.png" data-holder-rendered="true">
-        </div>
-      </div>
-	  
-    </div>
-    <!-- /.row -->
+	<!-- Preguntas frequentes -->
+    <h1 class="mt-5 mb-3">FAQ
+      <small>Preguntas frequentes</small>
+    </h1>
 
+    <div class="mb-4" id="accordion" role="tablist" aria-multiselectable="true">
+      <div class="card">
+        <div class="card-header" role="tab" id="headingOne">
+          <h5 class="mb-0">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">¿Cómo puedo reservar mesa en el restaurante?</a>
+          </h5>
+        </div>
+        <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+          <div class="card-body">
+            Será necesario reservar, vía <a href="about.html#form">formulario</a> o telefono. Solo se solicitará el número de tarjeta de crédito, en el caso que la reserva sea mayor de cuatro comensales, como garantía de que la asistencia se realizará correctamente.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" role="tab" id="headingTwo">
+          <h5 class="mb-0">
+            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">¿Puedo cancelar mi reserva?
+            </a>
+          </h5>
+        </div>
+        <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="card-body">
+            <strong>SI</strong>, puede cancelar su reserva en cualquier momento desde el enlace del mail que recibió a la hora de solicitar su reserva sin ningún coste para usted. <strong>SOLO</strong> en caso de estar dentro en las 12 horas previas a la hora y fecha de su reserva en Restaurante Pizza Plaza.
+		  </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" role="tab" id="headingThree">
+          <h5 class="mb-0">
+            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">¿Qué pasa si no asisto a mi reserva?</a>
+          </h5>
+        </div>
+        <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="card-body">
+            Desde Pizza Plaza siempre hacemos una doble verificación de cada reserva, enviando un mail a todos nuestros clientes para confirmar su asistencia a la hora de hacer la reserva, y otro entre 24 y 48 horas antes de la fecha y hora de su reserva para la confirmación final.
+			<br><br>
+			En caso de no asistir a la reserva confirmada, se le cargaría en cuenta el precio mínimo por comensal.
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <!-- /Contenido -->
+  <!-- /.container -->
 
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
       <div class="row">
         <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
-		  <!-- Listado de referencias -->
           <ul class="list-inline mb-2">
             <li class="list-inline-item">
               <a href="https://github.com/Gorgonh/IngenieriaWebRestaurante">GitHub</a>
@@ -167,8 +137,7 @@
           <p class="text-muted small mb-4 mb-lg-0">Ingenería Web, 4º GII 2019. Arturo García Enguita.</p>
         </div>
         <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
-          <!-- Listado de RRSS -->
-		  <ul class="list-inline mb-0">
+          <ul class="list-inline mb-0">
             <li class="list-inline-item mr-3">
               <a href="#">
                 <i class="fab fa-facebook fa-2x fa-fw"></i>

@@ -13,7 +13,8 @@
   <!-- Bootstrap CSS, estructuración básica de la página -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   
-  <link rel='icon' href='img/favicon.ico' type='image/x-icon'/>
+  <!-- Icono de la página -->
+  <link rel='icon' href='img/circle.ico' type='image/x-icon'/>
   
   <!-- Fontawesome CSS, iconos -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
@@ -52,7 +53,10 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="about.html">Sobre nosotros&nbsp;</a>
+            <a class="nav-link" href="about.html">Contacto</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link" href="faq.html">FAQ&nbsp;</a>
           </li>
 		  <li class="nav-item">
             <a class="btn btn-primary" href="service.html">Iniciar pedido</a>
@@ -100,112 +104,59 @@
     </div>
     <!-- /Mapa y detalles -->
 	
-	<!-- Galeria de imagenes del local -->
+	<!-- Galeria de imagenes del local, Modal con carrusel -->
 	<h3 class="mt-4 mb-3">Galeria</h3>
 	
+	<div class="modal fade" id="modal">
+	  <div class="modal-dialog modal-lg">
+		<div class="modal-content">
+		  <div class="modal-body mb-0 p-0">
+		  	<div id="carouselGallery" class="carousel slide">
+			  <!-- Elementos -->
+			  <div class="carousel-inner" role="listbox">
+				<div class="carousel-item active" style="background-image: url('img/local-1-l.jpg')"></div>
+				<div class="carousel-item" style="background-image: url('img/local-2-l.jpg')"></div>
+				<div class="carousel-item" style="background-image: url('img/local-3-l.jpg')"></div>
+			  </div>
+			  <!-- Flecha derecha -->
+			  <a class="carousel-control-prev" href="#carouselGallery" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			  </a>
+			  <!-- Flecha izquierda -->
+			  <a class="carousel-control-next" href="#carouselGallery" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			  </a>
+			</div>
+		  </div>
+		  <div class="modal-footer justify-content-center">
+			<span id="modalFooter" class="mr-4">Fachada del local</span>
+		  </div>
+		</div>
+	  </div>
+    </div>
+	
     <div class="row">
-
       <div class="col-4">
-        <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-              <div class="modal-body mb-0 p-0">
-                <img class="img-fluid rounded" src="img/local-1-l.jpg" alt="local">
-              </div>
-			  <div class="modal-footer justify-content-center">
-                <span class="mr-4">Fachada del local</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <a><img class="img-fluid rounded basic-hover" src="img/local-1-s.jpg" alt="local"
-            data-toggle="modal" data-target="#modal1"></a>
+        <a href="#carouselGallery" data-slide-to="0">
+		  <img class="img-fluid rounded basic-hover" src="img/local-1-s.jpg" alt="local" data-toggle="modal" data-target="#modal">
+		</a>
       </div>
-
       <div class="col-4">
-        <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-              <div class="modal-body mb-0 p-0">
-				<img class="img-fluid rounded" src="img/local-2-l.jpg" alt="interior">
-              </div>
-			  <div class="modal-footer justify-content-center">
-                <span class="mr-4">Interior del local</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <a><img class="img-fluid rounded basic-hover" src="img/local-2-s.jpg" alt="interior"
-            data-toggle="modal" data-target="#modal2"></a>
+        <a href="#carouselGallery" data-slide-to="1">
+		  <img class="img-fluid rounded basic-hover" src="img/local-2-s.jpg" alt="interior" data-toggle="modal" data-target="#modal">
+		</a>
       </div>
-
       <div class="col-4">
-        <div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-              <div class="modal-body mb-0 p-0">
-				<img class="img-fluid rounded" src="img/local-3-l.jpg" alt="mesa">
-              </div>
-			  <div class="modal-footer justify-content-center">
-                <span class="mr-4">Uno de nuestros muchos platos!</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <a><img class="img-fluid rounded basic-hover" src="img/local-3-s.jpg" alt="mesa"
-            data-toggle="modal" data-target="#modal3"></a>
+        <a href="#carouselGallery" data-slide-to="2">
+		  <img class="img-fluid rounded basic-hover" src="img/local-3-s.jpg" alt="mesa" data-toggle="modal" data-target="#modal">
+		</a>
       </div>
-	  
     </div>
 	<!-- /Galeria de imagenes del local -->
 	
-	
-	<!-- Preguntas frequentes -->
-    <h1 class="mt-4 mb-3">FAQ
-      <small>Preguntas frequentes</small>
-    </h1>
-
-    <div class="mb-4" id="accordion" role="tablist" aria-multiselectable="true">
-      <div class="card">
-        <div class="card-header" role="tab" id="headingOne">
-          <h5 class="mb-0">
-            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">¿Cómo puedo reservar mesa en el restaurante?</a>
-          </h5>
-        </div>
-        <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
-          <div class="card-body">
-            Será necesario reservar, vía <a href="#form">formulario</a> o telefono. Solo se solicitará el número de tarjeta de crédito, en el caso que la reserva sea mayor de cuatro comensales, como garantía de que la asistencia se realizará correctamente.
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header" role="tab" id="headingTwo">
-          <h5 class="mb-0">
-            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">¿Puedo cancelar mi reserva?
-            </a>
-          </h5>
-        </div>
-        <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
-          <div class="card-body">
-            <strong>SI</strong>, puede cancelar su reserva en cualquier momento desde el enlace del mail que recibió a la hora de solicitar su reserva sin ningún coste para usted. <strong>SOLO</strong> en caso de estar dentro en las 12 horas previas a la hora y fecha de su reserva en Restaurante Pizza Plaza.
-		  </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header" role="tab" id="headingThree">
-          <h5 class="mb-0">
-            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">¿Qué pasa si no asisto a mi reserva?</a>
-          </h5>
-        </div>
-        <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
-          <div class="card-body">
-            Desde Pizza Plaza siempre hacemos una doble verificación de cada reserva, enviando un mail a todos nuestros clientes para confirmar su asistencia a la hora de hacer la reserva, y otro entre 24 y 48 horas antes de la fecha y hora de su reserva para la confirmación final.
-			<br><br>
-			En caso de no asistir a la reserva confirmada, se le cargaría en cuenta el precio mínimo por comensal.
-          </div>
-        </div>
-      </div>
-    </div>
+	<br>
 	
 	<a class="anchor" id='form'></a>
 	<!-- Formulario de contacto -->
@@ -257,7 +208,7 @@
         <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
           <ul class="list-inline mb-2">
             <li class="list-inline-item">
-              <a href="https://github.com/Gorgonh/IngenieraWebRestaurante">GitHub</a>
+              <a href="https://github.com/Gorgonh/IngenieriaWebRestaurante">GitHub</a>
             </li>
 			<li class="list-inline-item">
               <a href="https://startbootstrap.com/">StartBootstrap</a>
@@ -281,7 +232,7 @@
               </a>
             </li>
             <li class="list-inline-item">
-              <a href="https://github.com/Gorgonh/IngenieraWebRestaurante">
+              <a href="https://github.com/Gorgonh/IngenieriaWebRestaurante">
                 <i class="fab fa-github fa-2x fa-fw"></i>
               </a>
             </li>
@@ -294,6 +245,26 @@
   <!-- Bootstrap JavaScript esencial -->
   <script src="js/bootstrap/jquery.min.js"></script>
   <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+  
+  <!-- Captura acciones en el carrusel y actualiza su mensaje -->
+  <script>
+  $('#carouselGallery').bind('slide.bs.carousel', function (e) {
+    var slide = $(e.relatedTarget).index();
+	var footer = document.getElementById('modalFooter');
+	
+	switch (slide) {
+	  case 0:
+		footer.innerHTML = "Fachada del local";
+		break;
+	  case 1:
+		footer.innerHTML = "Interior del local";
+		break;
+	  case 2:
+		footer.innerHTML = "Uno de nuestros muchos platos!";
+		break;
+	}
+  });
+  </script>
 
 </body>
 
