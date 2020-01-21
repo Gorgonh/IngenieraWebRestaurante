@@ -99,25 +99,25 @@
       {
          "name":"3 Medianas 7€ c/u",
          "sub":"Ahorras 3€",
-         "img":"img/oferta1.jpg",
+         "img":"img/oferta1.png",
          "desc":"3 pizzas medianas a domicilio 7€ cada una. Masas Roll, con topplers +1€. Válido hasta el 26/01/2020."
       },
       {
          "name":"2 x 1",
          "sub":"Ahorras 1 pizza",
-         "img":"img/oferta2.jpg",
+         "img":"img/oferta2.png",
          "desc":"Oferta válida al pedir cualquier pizza, llévate otra de igual o inferior valor que la primera. Válida hasta el 02/03/2020."
       },
       {
          "name":"2 Muffins 2.99€",
          "sub":"Ahorras 2.11€",
-         "img":"img/oferta3.jpg",
+         "img":"img/oferta3.png",
          "desc":"Acompaña tu pedido con 2 Muffins por sólo 2,99 euros. Oferta válida hasta el 02/03/2020."
       },
       {
          "name":"Familiar aquí 13€",
          "sub":"Ahorras 5€",
-         "img":"img/oferta1.jpg",
+         "img":"img/oferta1.png",
          "desc":"Pizza familiar solo en tienda 13€. Válida hasta el 02/03/2020."
       }
    ]
