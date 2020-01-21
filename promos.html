@@ -78,71 +78,8 @@
       </div>
     </div>
  
-    <!-- Intro Content -->
-	<div class="row mb-2">
-	
-	  <!-- 1º Oferta de ejemplo -->
-      <div class="col-md-6">
-        <div class="card flex-md-row mb-4 box-shadow h-md-250">
-          <div class="card-body d-flex flex-column align-items-start">
-            <h3 class="mb-0">
-              <a class="text-dark" href="service.html">3 Medianas 7€ c/u</a>
-            </h3>
-            <div class="mb-1 text-muted">Ahorras 3€</div>
-            <p class="card-text mb-auto">3 pizzas medianas a domicilio 7€ cada una. Masas Roll, con topplers +1€. Válido hasta el 26/01/2020.</p>
-			<a href="service.html" class="btn btn-primary">Encargar</a>
-          </div>
-          <img class="card-img-right flex-auto d-none d-md-block" alt="promo 777" style="width: 200px; height: 250px;" src="img/oferta1.png" data-holder-rendered="true">
-        </div>
-      </div>
-	  
-	  <!-- 2º Oferta de ejemplo -->
-      <div class="col-md-6">
-        <div class="card flex-md-row mb-4 box-shadow h-md-250">
-          <div class="card-body d-flex flex-column align-items-start">
-            <h3 class="mb-0">
-              <a class="text-dark" href="service.html">2 x 1</a>
-            </h3>
-            <div class="mb-1 text-muted">Ahorras 1 pizza</div>
-            <p class="card-text mb-auto">Oferta válida al pedir cualquier pizza, llévate otra de igual o inferior valor que la primera. Válida hasta el 02/03/2020.</p>
-			<a href="service.html" class="btn btn-primary">Encargar</a>
-          </div>
-          <img class="card-img-right flex-auto d-none d-md-block" alt="promo 2x1 pizza" style="width: 200px; height: 250px;" src="img/oferta2.png" data-holder-rendered="true">
-        </div>
-      </div>
-	  
-	  <!-- 3º Oferta de ejemplo -->
-      <div class="col-md-6">
-        <div class="card flex-md-row mb-4 box-shadow h-md-250">
-          <div class="card-body d-flex flex-column align-items-start">
-            <h3 class="mb-0">
-              <a class="text-dark" href="service.html">2 Muffins 2.99€</a>
-            </h3>
-            <div class="mb-1 text-muted">Ahorras 2.11€</div>
-            <p class="card-text mb-auto">Acompaña tu pedido con 2 Muffins por sólo 2,99 euros. Oferta válida hasta el 02/03/2020.</p>
-			<a href="service.html" class="btn btn-primary">Encargar</a>
-          </div>
-          <img class="card-img-right flex-auto d-none d-md-block" alt="promo 2x1 muffin" style="width: 200px; height: 250px;" src="img/oferta3.png" data-holder-rendered="true">
-        </div>
-      </div>
-	  
-	  <!-- 4º Oferta de ejemplo -->
-      <div class="col-md-6">
-        <div class="card flex-md-row mb-4 box-shadow h-md-250">
-          <div class="card-body d-flex flex-column align-items-start">
-            <h3 class="mb-0">
-              <a class="text-dark" href="service.html">Familiar aquí 13€</a>
-            </h3>
-            <div class="mb-1 text-muted">Ahorras 5€</div>
-            <p class="card-text mb-auto">Pizza familiar solo en tienda 13€. Válida hasta el 02/03/2020.</p>
-			<a href="service.html" class="btn btn-primary">Encargar</a>
-          </div>
-          <img class="card-img-right flex-auto d-none d-md-block" alt="promo 777" style="width: 200px; height: 250px;" src="img/oferta4.png" data-holder-rendered="true">
-        </div>
-      </div>
-	  
-    </div>
-    <!-- /.row -->
+    <!-- Listado de promociones -->
+	<div id="promociones-list" class="row mb-2"></div>
 
   </div>
   <!-- /Contenido -->
@@ -193,6 +130,48 @@
   <!-- Bootstrap JavaScript esencial -->
   <script src="js/bootstrap/jquery.min.js"></script>
   <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+
+  <script type="text/javascript">
+    var req;
+  
+    loadData(renderPromos);
+	
+	function renderPromos() {
+	  var jsonResponse = JSON.parse(req.responseText);
+	  var vct = jsonResponse.promos;
+      var row = document.getElementById('promociones-list');
+
+	  for (i in vct) {     
+		var name = vct[i].name;
+		var sub = vct[i].sub;
+		var img = vct[i].img;
+		var desc = vct[i].desc;
+		
+		row.innerHTML = row.innerHTML +
+		'<div class="col-md-6">' +
+        '<div class="card flex-md-row mb-4 box-shadow h-md-250">' +
+          '<div class="card-body d-flex flex-column align-items-start">' +
+            '<h3 class="mb-0">' +
+              '<a class="text-dark" href="service.html?'+ name +'">'+ name +'</a>' +
+            '</h3>' +
+            '<div class="mb-1 text-muted">'+ sub +'</div>' +
+            '<p class="card-text mb-auto">'+ desc +'</p>' +
+			'<a href="service.html?'+ name +'" class="btn btn-primary">Encargar</a>' +
+          '</div>' +
+          '<img class="card-img-right flex-auto d-none d-md-block" alt="'+ name +'" src="'+ img +'" data-holder-rendered="true">' +
+        '</div>'
+      '</div>';
+	  }
+	}
+	
+	function loadData(action) {
+	  req = new XMLHttpRequest();
+	  req.overrideMimeType("application/json");
+	  req.open('GET', 'https://gorgonh.github.io/IngenieriaWebRestaurante/json/data.json', true);
+	  req.onload = action;
+	  req.send(null);  
+    }
+  </script>
 
 </body>
 

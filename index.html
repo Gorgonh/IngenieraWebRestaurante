@@ -109,64 +109,7 @@
     <!-- 3 Ofertas a generar dinámicamente -->
 	<h2>Ofertas de la semana</h2>
 	
-    <div id="Offers" class="row">
-	
-	  <!-- 1º Oferta de ejemplo -->
-      <div class="col-lg-4 mb-4">
-        <div class="card h-100">
-          <h4 class="card-header">
-		    <a class="text-dark" href="service.html">Margherita</a>
-		  </h4>
-		  <a href="service.html"><img class="card-img-top basic-hover" src="img/pizza1.jpg" alt="Pizza margarita"></a>
-          <div class="card-body">
-            <p class="card-text">Típica napolitana condimentada con tomate, Fior di latte, albahaca, sal y aceite.</p>
-          </div>
-          <div class="card-footer">
-			<a href="service.html" class="btn btn-primary">Encargar</a>
-			<span class="display-5 float-right">12.95€</span>
-			<span class="strike btn float-right">17.90€</span>
-          </div>
-        </div>
-      </div>
-	  
-	  <!-- 2º Oferta de ejemplo -->
-      <div class="col-lg-4 mb-4">
-        <div class="card h-100">
-          <h4 class="card-header">
-		    <a class="text-dark" href="service.html">Americana</a>
-	      </h4>
-		  <a href="service.html"><img class="card-img-top basic-hover" src="img/pizza2.jpg" alt="Pizza americana"></a>
-          <div class="card-body">
-            <p class="card-text">Pepperoni, bacon, mozzarella y jalapeño, que más se puede pedir ¿Piña?</p>
-          </div>
-          <div class="card-footer">
-            <a href="service.html" class="btn btn-primary">Encargar</a>
-			<span class="display-5 float-right">14.95€</span>
-			<span class="strike btn float-right">19.90€</span>
-          </div>
-        </div>
-      </div>
-	  
-	  <!-- 3º Oferta de ejemplo -->
-      <div class="col-lg-4 mb-4">
-        <div class="card h-100">
-          <h4 class="card-header">
-		    <a class="text-dark" href="service.html">Combinada</a>
-		  </h4>
-		  <a href="service.html"><img class="card-img-top basic-hover" src="img/pizza9.jpg" alt="Pizza combinada"></a>
-          <div class="card-body">
-            <p class="card-text">¿Te apetece una pizza pero no sabes de que? Tenemos la solución a tus problemas.</p>
-          </div>
-          <div class="card-footer">
-            <a href="service.html" class="btn btn-primary">Encargar</a>
-			<span class="display-5 float-right">13.95€</span>
-			<span class="strike btn float-right">18.90€</span>
-          </div>
-        </div>
-      </div>
-	  
-    </div>
-    <!-- /.row -->
+    <div id="ofertas-list" class="row"></div>
 
     <!-- Features Section -->
     <div class="row">
@@ -251,6 +194,52 @@
   <!-- Bootstrap JavaScript esencial -->
   <script src="js/bootstrap/jquery.min.js"></script>
   <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+
+  <script type="text/javascript">
+    var req;
+  
+    loadData(renderWeek);
+	
+	function renderWeek() {
+	  var jsonResponse = JSON.parse(req.responseText);
+	  var vct = jsonResponse.pizzas;
+      var row = document.getElementById('ofertas-list');
+
+	  for (i in vct) {     
+		var name = vct[i].name;
+		var price = vct[i].price;
+		var img = vct[i].img;
+		var desc = vct[i].desc;
+		
+		row.innerHTML = row.innerHTML +
+		'<div class="col-lg-4 mb-4">' +
+        '<div class="card h-100">' +
+          '<h4 class="card-header">' +
+		    '<a class="text-dark" href="service.html?'+ name +'">'+ name +'</a>'+
+		  '</h4>' +
+		  '<a href="service.html"><img class="card-img-top basic-hover" src="'+ img +'" alt="'+ name +'"></a>' +
+          '<div class="card-body">' +
+            '<p class="card-text">'+ desc +'</p>' +
+          '</div>' +
+          '<div class="card-footer">' +
+			'<a href="service.html?'+ name +'" class="btn btn-primary">Encargar</a>' +
+			'<span class="display-5 float-right">'+ (price * 0.9).toFixed(2) +'€</span>' +
+			'<span class="strike btn float-right">'+ price +'€</span>' +
+          '</div>'
+        '</div>'
+        '</div>';
+		if (i > 1) break;
+	  }
+	}
+	
+	function loadData(action) {
+	  req = new XMLHttpRequest();
+	  req.overrideMimeType("application/json");
+	  req.open('GET', 'https://gorgonh.github.io/IngenieriaWebRestaurante/json/data.json', true);
+	  req.onload = action;
+	  req.send(null);  
+    }
+  </script>
 
 </body>
 
