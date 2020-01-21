@@ -23,12 +23,39 @@
 
   <script type="text/javascript" src="json/pizzas.json"></script>
   <script type="text/javascript">
-    fetch('http://localhost/json/pizzas.json')
-	  .then(response => response.text())
-	  .then((data) => {
-		console.log(data)
-	  })
+    var vct = JSON.parse(loadFile('https://gorgonh.github.io/IngenieriaWebRestaurante/json/pizzas.json'));
+	
+	var row = document.getElementById('a');
 
+	for (i in vct) {     
+		var name = vct[i].name;
+		var img = vct[i].img;
+		var desc = vct[i].desc;
+		
+		row.innerHTML = row.innerHTML +
+		'<div class="col-lg-3 col-md-4 col-sm-6">' +
+			'<div class="hover hover-effect text-white rounded"><img src="'+ img +'" alt="'+ name +'">' +
+				'<div class="hover-overlay"></div>' +
+				'<div class="hover-effect-content px-5 py-4">' +
+					'<p class="hover-effect-description small text-uppercase mb-0">'+ desc +'</p>' +
+				'</div>' +
+			'</div>' +
+			'<h4 class="by-4 text-center">' +
+				'<a href="#">'+ name + '</a>' +
+			'</h4>' +
+		'</div>';
+	}
+	
+	function loadFile(filePath) {
+	  var result = null;
+	  var xmlhttp = new XMLHttpRequest();
+	  xmlhttp.open("GET", filePath, false);
+	  xmlhttp.send();
+	  if (xmlhttp.status==200) {
+		result = xmlhttp.responseText;
+	  }
+	  return result;
+    }
   </script>
 </body>
 
