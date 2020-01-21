@@ -1,4 +1,4 @@
-{[
+[
 	{"name":"Margherita", "img":"img/pizza1.jpg", "desc":"Típica napolitana condimentada con tomate, Fior di latte, albahaca, sal y aceite."},
 	{"name":"Americana", "img":"img/pizza2.jpg", "desc":"Pepperoni, bacon, mozzarella y jalapeño, que más se puede pedir ¿Piña?."},
 	{"name":"Quattro", "img":"img/pizza3.jpg", "desc":"De masa baja, crocante y condimentada con mozzarella, gruyere, roquefort y parmesano."},
@@ -7,4 +7,4 @@
 	{"name":"Veggie", "img":"img/pizza6.jpg", "desc":"Pesto de base y decorada con cebolla y pimiento verde."},
 	{"name":"Atún", "img":"img/pizza7.jpg", "desc":"Una pizza de atún tun tun con cebolla y huevo."},
 	{"name":"Basil", "img":"img/pizza8.jpg", "desc":"Nuestra reinvención de la mediterranea con york."}
-]}
+]
