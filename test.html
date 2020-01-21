@@ -23,7 +23,7 @@
 
   <script type="text/javascript" src="json/pizzas.json"></script>
   <script type="text/javascript">
-    var vct = JSON.parse(loadFile('https://gorgonh.github.io/IngenieriaWebRestaurante/json/pizzas.json'));
+    var vct = loadFile('https://gorgonh.github.io/IngenieriaWebRestaurante/json/pizzas.json');
 	
 	var row = document.getElementById('a');
 
@@ -45,17 +45,17 @@
 			'</h4>' +
 		'</div>';
 	}
-	
-	function loadFile(filePath) {
-	  var result = null;
-	  var xmlhttp = new XMLHttpRequest();
-	  xmlhttp.open("GET", filePath, false);
-	  xmlhttp.send();
-	  if (xmlhttp.status==200) {
-		result = xmlhttp.responseText;
-	  }
-	  return result;
-    }
+
+      function loadFile(url) {
+	var req = new XMLHttpRequest();
+	req.overrideMimeType("application/json");
+	req.open('GET', url, true);
+	req.onload  = function() {
+	   var jsonResponse = JSON.parse(req.responseText);
+	   // do something with jsonResponse
+	};
+	req.send(null);  
+      }
   </script>
 </body>
 
