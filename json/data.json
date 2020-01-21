@@ -1,0 +1,124 @@
+{
+   "pizzas":[
+      {
+         "name":"Margherita",
+         "img":"img/pizza1.jpg",
+         "desc":"Típica napolitana condimentada con tomate, Fior di latte, albahaca, sal y aceite.",
+		 "price":12.95
+      },
+      {
+         "name":"Americana",
+         "img":"img/pizza2.jpg",
+         "desc":"Pepperoni, bacon, mozzarella y jalapeño, que más se puede pedir ¿Piña?.",
+		 "price":14.95
+      },
+      {
+         "name":"Quattro",
+         "img":"img/pizza3.jpg",
+         "desc":"De masa baja, crocante y condimentada con mozzarella, gruyere, roquefort y parmesano.",
+		 "price":13.95
+      },
+      {
+         "name":"Hortelana",
+         "img":"img/pizza4.jpg",
+         "desc":"De la huerta, huerta llega nuestra pizza para los amantes del buen sabor.",
+		 "price":13.95
+      },
+      {
+         "name":"Mediterranea",
+         "img":"img/pizza5.jpg",
+         "desc":"Mediterranea, mitad maiz mitad olivas.",
+		 "price":13.95
+      },
+      {
+         "name":"Veggie",
+         "img":"img/pizza6.jpg",
+         "desc":"Pesto de base y decorada con cebolla y pimiento verde.",
+		 "price":14.95
+      },
+      {
+         "name":"Atún",
+         "img":"img/pizza7.jpg",
+         "desc":"Una pizza de atún tun tun con cebolla y huevo.",
+		 "price":13.95
+      },
+      {
+         "name":"Basil",
+         "img":"img/pizza8.jpg",
+         "desc":"Nuestra reinvención de la mediterranea con york.",
+		 "price":14.95
+      }
+   ],
+      "bebidas":[
+      {
+         "name":"Pepsi",
+         "img":"img/bebida1.jpg",
+         "desc":"Refresco Pepsi cola",
+		 "price":2.05
+      },
+      {
+         "name":"Kas limón",
+         "img":"img/bebida2.jpg",
+         "desc":"Refresco Kas sabor limón.",
+		 "price":2.05
+      },
+      {
+         "name":"Kas Naranja",
+         "img":"img/bebida3.jpg",
+         "desc":"Refresco Kas sabor naranja.",
+		 "price":2.05
+      },
+      {
+         "name":"Agua",
+         "img":"img/bebida4.jpg",
+         "desc":"Botella de agua mineral",
+		 "price":1.35
+      }
+   ],
+      "postres":[
+      {
+         "name":"Muffin",
+         "img":"img/postre1.jpg",
+         "desc":"Muffin/magdalena rellena de intenso chocolate negro.",
+		 "price":3.15
+      },
+      {
+         "name":"Brownie",
+         "img":"img/postre2.jpg",
+         "desc":"Mitad galleta mitad brownie de chocolate.",
+		 "price":3.15
+      },
+      {
+         "name":"Cookie",
+         "img":"img/postre3.jpg",
+         "desc":"Las mejores cookies que vas a aceptar en mucho tiempo.",
+		 "price":3.15
+      }
+   ],
+   "promos":[
+      {
+         "name":"3 Medianas 7€ c/u",
+         "sub":"Ahorras 3€",
+         "img":"img/oferta1.jpg",
+         "desc":"3 pizzas medianas a domicilio 7€ cada una. Masas Roll, con topplers +1€. Válido hasta el 26/01/2020."
+      },
+      {
+         "name":"2 x 1",
+         "sub":"Ahorras 1 pizza",
+         "img":"img/oferta2.jpg",
+         "desc":"Oferta válida al pedir cualquier pizza, llévate otra de igual o inferior valor que la primera. Válida hasta el 02/03/2020."
+      },
+      {
+         "name":"2 Muffins 2.99€",
+         "sub":"Ahorras 2.11€",
+         "img":"img/oferta3.jpg",
+         "desc":"Acompaña tu pedido con 2 Muffins por sólo 2,99 euros. Oferta válida hasta el 02/03/2020."
+      },
+      {
+         "name":"Familiar aquí 13€",
+         "sub":"Ahorras 5€",
+         "img":"img/oferta1.jpg",
+         "desc":"Pizza familiar solo en tienda 13€. Válida hasta el 02/03/2020."
+      }
+   ]
+}
