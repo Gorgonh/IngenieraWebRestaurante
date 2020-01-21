@@ -52,25 +52,25 @@
       "bebidas":[
       {
          "name":"Pepsi",
-         "img":"img/bebida1.jpg",
+         "img":"img/bebida1.png",
          "desc":"Refresco Pepsi cola",
 		 "price":2.05
       },
       {
          "name":"Kas limón",
-         "img":"img/bebida2.jpg",
+         "img":"img/bebida2.png",
          "desc":"Refresco Kas sabor limón.",
 		 "price":2.05
       },
       {
          "name":"Kas Naranja",
-         "img":"img/bebida3.jpg",
+         "img":"img/bebida3.png",
          "desc":"Refresco Kas sabor naranja.",
 		 "price":2.05
       },
       {
          "name":"Agua",
-         "img":"img/bebida4.jpg",
+         "img":"img/bebida4.png",
          "desc":"Botella de agua mineral",
 		 "price":1.35
       }
